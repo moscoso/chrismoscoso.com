@@ -1,0 +1,96 @@
+body{font-family: 'Raleway', 'Open Sans', sans-serif; background:white; color:black; width: 100vw; overflow-x:hidden;}
+::-webkit-input-placeholder {
+	font-family: 'Raleway'
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	font-family: 'Raleway'
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	font-family: 'Raleway'
+}
+
+:-ms-input-placeholder {  
+	font-family: 'Raleway'
+}
+
+
+h1, p{font-weight:300;}
+h2, h3, h4{font-weight:200;}
+input{color:black;}
+
+@media (max-width: 768px) {
+	#number h1{font-size:72px;}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+#canvas3{
+	display:none !important;
+}
+
+#canvas2{
+	display:none !important;
+}
+
+#about-me h1{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+	font-size: 72px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+
+.plain-anchor{text-decoration:none; color:inherit;}
+
+
+#landing{background:url("../img/clouds.jpg"); min-height:430px; width:100vw; height:100vh; background-size:cover; padding:0; overflow-y:hidden;}
+
+
+@media (min-width: 992px){
+	min-height:530px;
+}
+
+
+#iam{width: 100%;top: -70%; text-align: center; position: relative;}
+
+
+#iam.canvasRemoved{top: 30%;}
+.scroll-down-btn.canvasRemoved{
+	top: 35%;
+	-webkit-animation: SCROLL-DOWN-BOUNCE-2 1s infinite;
+	-moz-animation: SCROLL-DOWN-BOUNCE-2 1s infinite;
+	-o-animation: SCROLL-DOWN-BOUNCE-2 1s infinite;
+	animation: SCROLL-DOWN-BOUNCE-2 1s infinite;
+}
+
+
+@-webkit-keyframes SCROLL-DOWN-BOUNCE-2 {
+	0%   { top: 35%; }
+	50% { top: 40%; }
+	100% { top: 35%; }
+}
+@-moz-keyframes SCROLL-DOWN-BOUNCE-2 {
+	0%   { top: 35%; }
+	50% { top: 40%; }
+	100% { top: 35%; }
+}
+@-o-keyframes SCROLL-DOWN-BOUNCE-2 {
+	0%   { top: 35%; }
+	50% { top: 40%; }
+	100% { top: 35%; }
+}
+@keyframes SCROLL-DOWN-BOUNCE-2 {
+	0%   { top: 35%; }
+	50% { top: 40%; }
+	100% { top: 35%; }
+}
+
+
+
+

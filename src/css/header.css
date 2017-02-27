@@ -1,0 +1,191 @@
+#logo {
+	font-family: 'Raleway' !important;
+}
+
+header{
+	position:relative;
+	overflow:auto;
+}
+
+header h1{
+	transition: font-size 0.2s ease-in;
+	-moz-transition: font-size 0.2s ease-in;
+	-webkit-transition: font-size 0.2s ease-in;
+	-o-transition: font-size 0.2s ease-in;
+}
+
+#navMenu {
+	list-style: none;
+	color: white;
+	font-family: 'Montserrat','Open Sans';
+	line-height: 24px;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	letter-spacing: 3px;
+}
+
+#navMenu li:hover {
+	color: #12EBAB;
+}
+
+#navMenu a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#menu-btn{
+	z-index:999;
+	position: absolute;
+	right: 2%;
+	text-align: center;
+	bottom: 20px;
+	color: white;
+}
+
+
+
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 991px and down) */
+@media (max-width: 991px) { 
+	header{
+		background-color:black !important;
+		text-align: center;
+		padding-bottom: 20px;
+		padding-top: 5px;
+	}
+
+
+
+	header h1 {
+		margin: 0px;
+	}
+
+
+	#menu-btn { display:block; }
+
+	#navMenu {
+		margin-top: 20px;
+		display: none;
+	}
+
+	#navMenu li {
+		margin-top: 10px;
+	}
+
+
+}
+
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	header h1 {margin: 15px 0px 0px 0px;padding: 0px; font-size:26px;}
+
+	/*Uncomment the line below to fix header*/
+	header{width: 100%;position: fixed;z-index: 99;
+		transition: background-color 0.5s ease-in;
+		-moz-transition: background-color 0.5s ease-in;
+		-webkit-transition: background-color 0.5s ease-in;
+		-o-transition: background-color 0.5s ease-in;}
+
+	.resume-btn {position: fixed; z-index: 999;}
+
+	#menu-btn {
+		display:none;
+	}
+
+	#navMenu {
+		display:block !important;
+		margin-top: 25px;
+	}
+
+	#navMenu li {
+		display: inline-block;
+		padding-right: 20px;
+		-webkit-transition: all 500ms ease-out;
+		-moz-transition: all 500ms ease-out;
+		-o-transition: all 500ms ease-out;
+		transition: all 500ms ease-out;
+		text-shadow: 1px 1px 10px black;
+	}
+
+	#navMenu li:hover {
+		font-size: 20px;
+		text-shadow: 1px 1px 1px black;
+	}
+
+}
+
+@media (min-width: 1120px) {
+	header h1 {font-size:30px;}
+}
+
+
+@media (min-width: 1320px) {
+	header h1 {font-size:36px;}
+}
+
+.resume-btn {
+	display: inline-block;
+	margin-top: 25px;
+	padding: 10px;
+	font-family: 'Montserrat';
+	transform: translateZ(0);
+	background: #12EBAB;
+	border: 2px solid #12EBAB!important;
+	outline: 0!important;
+	-moz-box-shadow: 0 0 20px rgba(18, 235, 171, 0.79);
+	-webkit-box-shadow: 0 0 20px rgba(18, 235, 171, 0.79);
+	box-shadow: 0 0 20px rgba(18, 235, 171, 0.79);
+	letter-spacing: 4px;
+}
+
+.resume-btn:hover {
+	cursor: pointer;
+	-moz-box-shadow: 0 0 50px rgba(18, 235, 171, 0.79);
+	-webkit-box-shadow: 0 0 50px rgba(18, 235, 171, 0.79);
+	box-shadow: 0 0 50px rgba(18, 235, 171, 0.79);
+	letter-spacing: 4px;
+}
+
+
+
+.nav-toggle { display:block; cursor: pointer; padding: 10px 35px 16px 0px; }
+.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+	cursor: pointer;
+	border-radius: 1px;
+	height: 5px;
+	width: 35px;
+	background: white;
+	position: absolute;
+	display: block;
+	content: '';
+}
+.nav-toggle span:before {
+	top: -10px; 
+}
+.nav-toggle span:after {
+	bottom: -10px;
+}
+
+.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+	transition: all 500ms ease-in-out;
+}
+.nav-toggle.active span {
+	background-color: transparent;
+}
+.nav-toggle.active span:before, .nav-toggle.active span:after {
+	top: 0;
+}
+.nav-toggle.active span:before {
+	transform: rotate(45deg);
+}
+.nav-toggle.active span:after {
+	transform: rotate(-45deg);
+}

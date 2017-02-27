@@ -1,0 +1,93 @@
+.scroll-down-btn {
+	top: -65%;
+	color: white !important;
+	text-align: center;
+	display: block;
+	width: 100%;
+	position: relative;
+	text-decoration: none !important;
+	font-size: 40px;
+	-webkit-animation: SCROLL-DOWN-BOUNCE 1s infinite;
+	-moz-animation: SCROLL-DOWN-BOUNCE 1s infinite;
+	-o-animation: SCROLL-DOWN-BOUNCE 1s infinite;
+	animation: SCROLL-DOWN-BOUNCE 1s infinite;
+	text-shadow: 1px 1px 10px black;
+}
+
+@-webkit-keyframes SCROLL-DOWN-BOUNCE {
+	0%   { top: -65%; }
+	50% { top: -60%; }
+	100% { top: -65%; }
+}
+@-moz-keyframes SCROLL-DOWN-BOUNCE {
+	0%   { top: -65%; }
+	50% { top: -60%; }
+	100% { top: -65%; }
+}
+@-o-keyframes SCROLL-DOWN-BOUNCE {
+	0%   { top: -65%; }
+	50% { top: -60%; }
+	100% { top: -65%; }
+}
+@keyframes SCROLL-DOWN-BOUNCE {
+	0%   { top: -65%; }
+	50% { top: -60%; }
+	100% { top: -65%; }
+}
+
+
+
+@media screen and (min-width: 992px) and (min-height: 530px){
+	.scroll-down-btn {
+		top: -35%;
+	}
+
+	@-webkit-keyframes SCROLL-DOWN-BOUNCE {
+		0%   { top: -35%; }
+		50% { top: -30%; }
+		100% { top: -35%; }
+	}
+	@-moz-keyframes SCROLL-DOWN-BOUNCE {
+		0%   { top: -35%; }
+		50% { top: -30%; }
+		100% { top: -35%; }
+	}
+	@-o-keyframes SCROLL-DOWN-BOUNCE {
+		0%   { top: -35%; }
+		50% { top: -30%; }
+		100% { top: -35%; }
+	}
+	@keyframes SCROLL-DOWN-BOUNCE {
+		0%   { top: -35%; }
+		50% { top: -30%; }
+		100% { top: -35%; }
+	}
+
+}
+
+/*@media screen and (min-height: 530px){
+	.scroll-down-btn {
+		top: -35%;
+	}
+
+	@-webkit-keyframes SCROLL-DOWN-BOUNCE {
+		0%   { top: -35%; }
+		50% { top: -30%; }
+		100% { top: -35%; }
+	}
+	@-moz-keyframes SCROLL-DOWN-BOUNCE {
+		0%   { top: -35%; }
+		50% { top: -30%; }
+		100% { top: -35%; }
+	}
+	@-o-keyframes SCROLL-DOWN-BOUNCE {
+		0%   { top: -35%; }
+		50% { top: -30%; }
+		100% { top: -35%; }
+	}
+	@keyframes SCROLL-DOWN-BOUNCE {
+		0%   { top: -35%; }
+		50% { top: -30%; }
+		100% { top: -35%; }
+	}
+}*/
