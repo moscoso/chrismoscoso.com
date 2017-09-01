@@ -1,3 +1,5 @@
+/* jshint node: true */
+
 var gulp = require('gulp');
 
 /* Browser Sync helps make web development easier by spinning up a web server that helps us do live-reloading easily. */
@@ -25,7 +27,7 @@ var cache = require('gulp-cache');
 var runSequence = require('run-sequence');
 
 /*This plugin helps delete (clean) files */
-var del = require('del')
+var del = require('del');
 
 /*This plugin removes unused css */
 var uncss = require('gulp-uncss');
@@ -41,7 +43,7 @@ var deleteUnusedImages = require('gulp-delete-unused-images');
 
 
 gulp.task('build', function(callback) {
-        runSequence('clean:dist',  'useref', 'images', /*'delete-unused-images',*/ 'minify', 'pdf', function(){});
+        runSequence('clean:dist',  'useref', 'images', /*'delete-unused-images',*/ 'videos', 'minify', 'pdf', function(){});
 });
 
 
@@ -62,19 +64,19 @@ gulp.task('watch', ['browserSync'], function(){
 gulp.task('useref', function(){
       return gulp.src('src/*.html')
       .pipe(useref())
-      .pipe(gulp.dest('dist'))
+      .pipe(gulp.dest('dist'));
 });
 
 //Clear the dist folder
 gulp.task('clean:dist', function() {
       return del.sync('dist');
-})
+});
 
 gulp.task('uncss-copy', function(){
  return gulp.src('src/css/*.css').pipe(uncss({
       html: ['src/index.html']
 }))
- .pipe(gulp.dest('src/uncss'))
+ .pipe(gulp.dest('src/uncss'));
 });
 
 //Minify css
@@ -112,7 +114,7 @@ gulp.task('minify', function(){
 gulp.task('images', function(){
       return gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
       .pipe(cache(imagemin()))
-      .pipe(gulp.dest('dist/img'))
+      .pipe(gulp.dest('dist/img'));
 });
 
 //Delete unused images
@@ -122,19 +124,30 @@ gulp.task('delete-unused-images', function(){
       .pipe(deleteUnusedImages({
             log: false,
             delete: true
-    }))
+    }));
 });
 
 
 //Clear cache
 gulp.task('cache:clear', function (callback) {
-      return cache.clearAll(callback)
-})
+      return cache.clearAll(callback);
+});
 
 //Copy resume.pdf to dist folder
 gulp.task('pdf', function(){
       return gulp.src('resume.pdf')
-      .pipe(gulp.dest('dist'))
+      .pipe(gulp.dest('dist'));
+});
+
+//copy vid folder
+gulp.task('videos', function(){
+	return gulp.src('vid/*')
+	.pipe(gulp.dest('dist'));
+});
+
+//copy vendor (copy all FOLDERS EVENTUALLY, inserting this task manually blows)
+gulp.task('vendors', function(){
+	//THIS DOESNT EVENT WORK LMAO
 });
 
 gulp.task('browserSync', function() {
@@ -142,6 +155,6 @@ gulp.task('browserSync', function() {
             server: {
                   baseDir: 'src'
           },
-  })
-})
+  });
+});
 

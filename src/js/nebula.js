@@ -9,6 +9,8 @@
 
 
 // The canvas element we are drawing into.      
+if($("body").width > 500){
+
 var	$canvas = $('#canvas');
 var	$canvas2 = $('#canvas2');
 var	$canvas3 = $('#canvas3');			
@@ -73,3 +75,4 @@ $(img).bind('load',null, function() {  ctx3.drawImage(img, 0,0, 570, 570);	loop(
 //img.src = 'http://www.professorcloud.com/images/nebula/nebula.jpg';
 img.src='img/clouds.jpg';
 
+}

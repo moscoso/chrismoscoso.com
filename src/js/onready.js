@@ -23,6 +23,7 @@ $(document).ready(function () {
 			var offset = $landing.height() - $header.height();
 
 			if ($header.offset().top > offset) {
+				
 				$header.css("background-color", "rgba(0,0,0,0.9)");
 			} else {
 				$header.css("background-color", "rgba(0,0,0,0)");
@@ -57,15 +58,14 @@ $(document).ready(function () {
 	var slides = document.querySelectorAll("section.magic");
 
 	// create scene for every slide
-	for (var i = 0; i < slides.length; i++) {
+	/*for (var i = 0; i < slides.length; i++) {
 		new ScrollMagic.Scene({
 				triggerElement: slides[i]
 			})
 			.setPin(slides[i])
-			.addIndicators() // add indicators (requires plugin)
+			//.addIndicators() // add indicators (requires plugin)
 			.addTo(controller);
-	}
-
+	}*/
 
 });
 
@@ -77,21 +77,10 @@ $(function () {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 			if (target.length) {
-				console.log("window width: " + $(window).width());
-
-				if ($(window).width() >= 992) {
-					console.log("yes");
-					$('html, body').animate({
-						scrollTop: target.offset().top - $("header").height()
-					}, 1000);
-					return false;
-				} else {
-					console.log("no");
-					$('html, body').animate({
-						scrollTop: target.offset().top
-					}, 1000);
-					return false;
-				}
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1000);
+				return false;
 			}
 		}
 	});

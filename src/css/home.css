@@ -45,6 +45,8 @@ input{color:black;}
 	margin-bottom: 20px;
 }
 
+.white{color:white;} /*TODO: Auto genrate these styles for all colors. Auto generate simple 2 color gradients */
+.bg-black{background:black;}
 
 .plain-anchor{text-decoration:none; color:inherit;}
 
@@ -56,6 +58,7 @@ input{color:black;}
 	min-height:530px;
 }
 
+section{padding-top: 87px;}
 
 #iam{width: 100%;top: -70%; text-align: center; position: relative;}
 
